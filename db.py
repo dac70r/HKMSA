@@ -7,7 +7,7 @@ import traceback
 #try, catch and 
 def test_connection():
     x = 0
-    try:
+    try:                #what we wanna execute, hrllo
         pass
     except Exception as e:
         logger.error(e)
