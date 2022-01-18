@@ -39,6 +39,9 @@ def test_connection():
         con.close()     #manually close the database
 
 def execute(query:str) -> int:
+    '''
+    Execute a sql query 
+    '''
     logger.info(f'execute() running...............')
     try:
         logger.info('Runnig test connection....') #more information on what is going on                
@@ -67,17 +70,10 @@ if __name__ == '__main__':
 
     CREATE TABLE url(
 
-    --id (should be integer)
-    id int AUTO_INCREMENT UNIQUE,--auto increments your insert 
-
-    --hash
+    id int AUTO_INCREMENT UNIQUE,
     shortened_url varchar(7) UNIQUE,
-
-    --original url 
-    original_url varchar(1000) NOT NULL, -- not null meaning bu hui shi kong de 
-
+    original_url varchar(1000) NOT NULL, 
     PRIMARY KEY(id,shortened_url)
-    
 
 );
     
